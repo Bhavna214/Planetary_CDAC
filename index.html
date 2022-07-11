@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+	<section class="draggable-elements">
+        <img src="/images/U.png" alt="" id="uranus" class="draggable" draggable="true">
+        <img src="/images/Earth.png" alt="" id="earth" class="draggable" draggable="true">
+        <img src="/images/Neptune.png" alt="" id="neptune" class="draggable" draggable="true">
+        <img src="/images/F.png" alt="" id="mercury" class="draggable" draggable="true">
+        <img src="/images/Jupiter.png" alt="" id="jupiter" class="draggable" draggable="true">
+        <img src="/images/p3.png" alt="" id="saturn" class="draggable" draggable="true">
+        <img src="/images/P2.png" alt="" id="venus" class="draggable" draggable="true">
+        <img src="/images/Mars.png" alt="" id="mars" class="draggable" draggable="true">
+    </section>
+    <section class="droppable-elements">
+        <div class="droppable" data-draggable-id="mercury"><span>Mercury</span></div>
+        <div class="droppable" data-draggable-id="venus"><span>Venus</span></div>
+        <div class="droppable" data-draggable-id="earth"><span>Earth</span></div>
+        <div class="droppable" data-draggable-id="mars"><span>Mars</span></div>
+        <div class="droppable" data-draggable-id="jupiter"><span>Jupiter</span></div>
+        <div class="droppable" data-draggable-id="saturn"><span>Saturn</span></div>
+        <div class="droppable" data-draggable-id="uranus"><span>Uranus</span></div>
+        <div class="droppable" data-draggable-id="neptune"><span>Neptune</span></div>
+    </section>
+
+    <section class="guide">
+        <img src="/images/4728-removebg-preview.png" alt="">
+        <div>
+            <div class="instructions" id="instruct">
+                Hello I am Dexter! I will be helping you to recreate the Solar System!
+            </div>
+            <button>OK</button>
+        </div>
+    </section>
+  </body>
+</html>
