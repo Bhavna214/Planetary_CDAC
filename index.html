@@ -9,6 +9,10 @@
     <script src="main.js" defer></script>
   </head>
   <body>
+    <video autoplay muted loop id="background_video">
+        <source src="stars_bg.mp4" type="video/mp4">
+    </video>
+    <div class="content">
 	<section class="draggable-elements">
         <img src="images/U.png" alt="" id="uranus" class="draggable" draggable="true">
         <img src="images/Earth.png" alt="" id="earth" class="draggable" draggable="true">
@@ -31,7 +35,7 @@
     </section>
 
     <section class="guide">
-        <img src="/images/4728-removebg-preview.png" alt="">
+        <img src="images/robot.jpg" alt="">
         <div>
             <div class="instructions" id="instruct">
                 Hello I am Dexter! I will be helping you to recreate the Solar System!
@@ -39,5 +43,6 @@
             <button>OK</button>
         </div>
     </section>
+</div>
   </body>
 </html>
