@@ -10,6 +10,25 @@ body{
     background-color: black;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    background-clip: "stars.mov";
+}
+
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+  }
+  
+
+#background_video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 .draggable-elements{
@@ -20,6 +39,7 @@ body{
     justify-content: center;
     border-radius: 20px;
     margin: 2rem;
+    height: 7rem;
 }
 
 .draggable{
@@ -33,11 +53,6 @@ body{
     cursor: move;
     transition: opacity 0.2s;
 }
-
-/* .draggable:hover{
-    opacity: 0.5;
-
-} */
 
 .droppable-elements{
     display: flex;
@@ -75,13 +90,14 @@ body{
 
 .droppable.dropped{
     border-style: solid;
-    border-width: 5px;
+    border-width: 0px;
     color: white;
 }
 
 .droppable.dropped span{
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
+    font-size: 0rem;
+    margin-top: 0rem;
+    
 }
 
 .droppable.dropped img{
@@ -90,7 +106,7 @@ body{
 
 .draggable.dragged{
     user-select: none;
-    opacity: 0.1;
+    opacity: 1;
     cursor: default;
 }
 
@@ -145,6 +161,5 @@ body{
         margin: 1.5rem;
     }
 }
-
 
 
