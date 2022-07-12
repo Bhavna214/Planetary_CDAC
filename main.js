@@ -46,7 +46,7 @@ droppableElements.forEach(elem=>{
         draggableElement.classList.add("dragged");
         draggableElement.setAttribute("draggable", "false");
         // event.target.insertAdjacentHTML("afterbegin", `<img id="${draggableElementData}"></img>`);
-        e.target.appendChild(document.getElementById(draggableElementData));
-        document.getElementById(draggableElementData).style="width:100%;";
+        event.target.appendChild(document.getElementById(draggableElementData));
+        // document.getElementById(draggableElementData).style="width:100%;";
     }
  }
