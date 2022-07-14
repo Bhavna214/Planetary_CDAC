@@ -16,13 +16,39 @@ droppableElements.forEach(elem => {
 })
 
 const planets = document.querySelectorAll('.planet')
-const p_radii = [125,110,95,80,65,50,35,20]
+const p_radii = [127,112,97,84,60,50,35,25]
 
 const p_orbits = document.querySelectorAll('.orbit')
 
 p_orbits.forEach((p_orbit, index)=>{
   p_orbit.style.height = `${p_radii[index]}vmin`
   p_orbit.style.width = `${p_radii[index]}vmin`
+})
+
+planets.forEach((planet, index) =>{
+   if(index == 4 || index == 6){
+      planet.style.top= `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${0.5*p_radii[index]}vmin`}
+   else if(index == 1){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${-0.5*p_radii[index]}vmin`
+   }
+   else if(index == 7){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${-0.45*p_radii[index]}vmin`
+   }
+   else if(index == 2 || index == 0){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${0.5*p_radii[index]}vmin`
+   }
+   else if(index == 3){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${-0.5*p_radii[index]}vmin`
+   }
+   else if(index == 5){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${-0.5*p_radii[index]}vmin`
+   }
 })
 
 // Drag and drop functions
@@ -184,8 +210,11 @@ function drop(event) {
          alert("YOU HAVE SUCCESSFULLY RECREATED THE SOLAR SYSTEM!")
       }
       event.target.classList.add("dropped");
+      event.target.classList.add("revolve");
+
       const draggableElement = document.getElementById(draggableElementData);
       draggableElement.classList.add("dragged");
+      // draggableElement.classList.add("orbit");
       draggableElement.setAttribute("draggable", "false");
       event.target.appendChild(document.getElementById(draggableElementData));
    }
