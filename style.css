@@ -8,21 +8,16 @@
 
 body{
     background-color: black;
-    color: white;
     font-family: 'Montserrat', sans-serif;
-    background-clip: "stars.mov";
 }
 
 .content {
-    position: fixed;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #f1f1f1;
+    position: relative;
+    top: 0;
+    background: transparent;
     width: 100%;
-    padding: 20px;
   }
   
-
 #background_video{
     position: fixed;
     right: 0;
@@ -35,11 +30,14 @@ body{
     border: 2px solid white;
     background-color: gray;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     border-radius: 20px;
     margin: 2rem;
-    height: 7rem;
+    height: 50rem;
+    width: 13.5%;
+    float: left;
 }
 
 .draggable{
@@ -54,34 +52,68 @@ body{
     transition: opacity 0.2s;
 }
 
-.droppable-elements{
+ .droppable-elements{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
-    float: right;
+    float: center;
+    width: 100%;
 }
+
+#sun{
+    height: vmin;
+    width: 12vmin;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-animation: circle 20s infinite linear;
+    animation: circle 20s infinite linear; 
+  }
+  
+.orbit{
+  border: 0.22vmin dashed white;
+  opacity: 1;
+  background: transparent;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* animation: circle 20s infinite linear;  */
+}
+
+#belt {
+    height: 72vmin;
+    width: 72vmin;
+    animation: circle 50s infinite linear;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* background: transparent; */
+    /* margin-top: 50vmin; */
+  }
 
 .droppable{
-    height: 6.5rem;
-    width: 6.5rem;
-    margin: 1rem auto;
+    position: relative;
+    /* left: -1px; */
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: transparent;
+    border: 2px white solid;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
     transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
-    border: 2px dashed white;
-}
-
-.droppable span{
-    font-size: 1rem;
-    pointer-events: none;
-}
-
-/* drag and drop related styling*/
+} 
 
 .droppable.droppable-hover{
     border-width: 3px;
@@ -92,12 +124,14 @@ body{
     border-style: solid;
     border-width: 0px;
     color: white;
+   /* -webkit-animation: circle 10s infinite linear; */
+    animation: circle 10s infinite linear; 
+    position: absolute;
 }
 
 .droppable.dropped span{
     font-size: 0rem;
     margin-top: 0rem;
-    
 }
 
 .droppable.dropped img{
@@ -120,7 +154,7 @@ body{
     flex-direction: row-reverse;
     width: 35%;
     background: aliceblue;
-    border: 2px solid white;
+    border: 1px solid white;
     margin: 3rem;
     border-radius: 20px;
     color: black;
@@ -137,19 +171,32 @@ body{
     width: 18rem;
     height: 18rem;
     float: right;
-    /* margin-top: 5rem; */
 }
 
 .guide button{
-    background-color: green;
+    background-color: black;
     font-size: 1rem;
     color: white;
     padding: 0.75rem;
     margin: 1rem;
-    width: 70px;
+    width: 200px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructions{
+    background-color: aqua;
+    padding: 1.2rem;
+    border-radius: 10px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media (max-width:600px){
@@ -162,4 +209,12 @@ body{
     }
 }
 
+@keyframes circle {
+    from {
+      -webkit-transform: rotateZ(0deg)
+    }
+    to {
+      -webkit-transform: rotateZ(360deg)
+    }
+  }
 
