@@ -35,7 +35,8 @@ body{
     align-items: center;
     justify-content: flex-start;
     border-radius: 20px;
-    margin: 0rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
     height: 50rem;
     width: 13.5%;
     float: left;
