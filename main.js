@@ -74,12 +74,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var secondPos = "It is the hottest planet but placed after Mercury!";
             document.getElementById("instruct").innerHTML = '<div>' + secondPos + '</div>'
+            currPlanet="earth"
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet="earth"
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="venus"
+         }
          break
 
       case "earth":
@@ -87,12 +88,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var thirdPos = "The planets before the Milky way are Terrestrial Planets. It is the second-last Terrestrial planet.";
             document.getElementById("instruct").innerHTML = '<div>' + thirdPos + '</div>'
+            currPlanet="mars"
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet="mars"
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="earth"
+         }
          break
 
       case "mars":
@@ -100,12 +102,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var fourthPos = "It comes right before the milky way.";
             document.getElementById("instruct").innerHTML = '<div>' + fourthPos + '</div>'
+            currPlanet="jupiter"
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet="jupiter"
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="mars"
+         }
          break
 
       case "jupiter":
@@ -113,12 +116,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var fifthPos = "It comes right after the milky way.";
             document.getElementById("instruct").innerHTML = '<div>' + fifthPos + '</div>'
+            currPlanet="saturn"
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet="saturn"
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="jupiter"
+         }
          break
 
       case "saturn":
@@ -126,12 +130,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var sixthPos = "It comes after the largest planet in the Solar System. One year of Saturn equals 29 Earth years!";
             document.getElementById("instruct").innerHTML = '<div>' + sixthPos + '</div>'
+            currPlanet="uranus"
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet="uranus"
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="saturn"
+         }
          break
 
       case "uranus":
@@ -139,12 +144,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var seventhPos = "It is the second-last planet in the solar system and is a neighbour of Saturn!";
             document.getElementById("instruct").innerHTML = '<div>' + seventhPos + '</div>'
+            currPlanet="neptune"
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet="neptune"
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="uranus"
+         }
          break
 
       case "neptune":
@@ -152,12 +158,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var eighthPos = "It is the last planet in the solar system.";
             document.getElementById("instruct").innerHTML = '<div>' + eighthPos + '</div>'
+            currPlanet=null
          }
-         // else {
-         //    document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-         //    document.getElementById("button").innerHTML = 'YES'
-         // }
-         currPlanet=null
+         else {
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="neptune"
+         }
          break
 
       case null:
