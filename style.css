@@ -72,8 +72,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    -webkit-animation: circle 20s infinite linear;
-    animation: circle 20s infinite linear; 
+    animation: ccircle 20s infinite linear; 
   }
   
 .orbit{
@@ -93,15 +92,13 @@ body{
 #belt {
     height: 150vmin;
     width: 150vmin;
-    animation: circle 50s infinite linear;
+    animation: ccircle 50s infinite linear;
     position: absolute;
     margin: auto;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /* background: transparent; */
-    /* margin-top: 50vmin; */
   }
 .revolve{
     animation: circle 20s infinite linear;
@@ -135,18 +132,13 @@ body{
     border-width: 0px;
     color: white;
    /* -webkit-animation: circle 10s infinite linear; */
-    animation: circle 10s infinite linear; 
+    animation: ccircle 10s infinite linear; 
     position: relative;
 }
 
-/* .orbit{
-    animation: circle 10s infinite linear;
-} */
-
-/* .droppable.dropped span{
-    font-size: 0rem;
-    margin-top: 0rem;
-} */
+.ven.dropped{
+    animation: circle 20s infinite linear; 
+}
 
 .droppable.dropped img{
     pointer-events: none;
@@ -237,5 +229,13 @@ body{
     }
     to {
       -webkit-transform: rotateZ(360deg)
+    }
+  }
+@keyframes ccircle {
+    from {
+      -webkit-transform: rotateZ(360deg)
+    }
+    to {
+      -webkit-transform: rotateZ(0deg)
     }
   }
