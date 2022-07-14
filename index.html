@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Drag and Drop</title>
+    <title>Recreate the solar system</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
   </head>
@@ -23,26 +23,45 @@
         <img src="images/P2.png" alt="" id="venus" class="draggable" draggable="true">
         <img src="images/Mars.png" alt="" id="mars" class="draggable" draggable="true">
     </section>
-    <section class="droppable-elements">
-        <div class="droppable" data-draggable-id="mercury"><span>Mercury</span></div>
-        <div class="droppable" data-draggable-id="venus"><span>Venus</span></div>
-        <div class="droppable" data-draggable-id="earth"><span>Earth</span></div>
-        <div class="droppable" data-draggable-id="mars"><span>Mars</span></div>
-        <div class="droppable" data-draggable-id="jupiter"><span>Jupiter</span></div>
-        <div class="droppable" data-draggable-id="saturn"><span>Saturn</span></div>
-        <div class="droppable" data-draggable-id="uranus"><span>Uranus</span></div>
-        <div class="droppable" data-draggable-id="neptune"><span>Neptune</span></div>
-    </section>
+    <div class="droppable-elements">
+        <img src="images/Moon.png" alt="" id="sun">
+        <img src="asteroid.png" alt="" id="belt">
+        <div class="orbit neptune">
+            <div class="droppable planet" data-draggable-id="neptune" style="top: 25rem; left: -2rem;"></div>
+        </div>
+        <div class="orbit uranus">
+            <div class="droppable planet" data-draggable-id="uranus" style="top: 8rem; left: 3rem;"></div>
+        </div>
+        <div class="orbit saturn">
+            <div class="droppable planet" data-draggable-id="saturn" style="top: 7rem; left: 37rem;"></div>  <!---->
+        </div>
+        <div class="orbit jupiter">
+            <div class="droppable planet" data-draggable-id="jupiter" style="top: 21rem; left: 33rem;"></div> <!---->
+        </div>
+        <div class="orbit mars">
+            <div class="droppable planet" data-draggable-id="mars" style="top: 25rem; left: 5rem;"></div> <!---->
+        </div>
+        <div class="orbit earth">
+            <div class="droppable planet" data-draggable-id="earth" style="left: 15rem;"></div> <!---->
+        </div>
+        <div class="orbit venus">
+            <div class="droppable planet" data-draggable-id="venus"></div>
+        </div>
+        <div class="orbit mercury">
+            <div class="droppable planet" data-draggable-id="mercury" style="left: 6rem;"></div>
+        </div>
+    </div>
 
     <section class="guide">
-        <img src="images/robot.jpg" alt="">
+        <img src="images/robot.png" alt="">
         <div>
             <div class="instructions" id="instruct">
                 Hello I am Dexter! I will be helping you to recreate the Solar System!
             </div>
-            <button>OK</button>
-        </div>
+            <button onclick="OKbutton()" id="button">OKAY</button>
+            </div>
     </section>
 </div>
+    <script src="guide.js"></script>
   </body>
 </html>
