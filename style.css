@@ -100,9 +100,7 @@ body{
     right: 0;
     bottom: 0;
   }
-.revolve{
-    animation: circle 20s infinite linear;
-}
+
 .droppable{
     position: relative;
     /* left: -1px; */
