@@ -193,35 +193,41 @@ function drop(event) {
    const droppableElementData = event.target.getAttribute("data-draggable-id")
    if (draggableElementData === droppableElementData) {
       if(currPlanet==="venus"){
+         document.getElementById("mercury1").className = "revolve";
          document.getElementById("button").innerHTML = 'NEXT';
       }
       if(currPlanet==="earth"){
+         document.getElementById("venus1").className = "revolve";
          document.getElementById("button").innerHTML = 'LETS MOVE AHEAD!';
       }
       if(currPlanet==="mars"){
+         document.getElementById("earth1").className = "revolve";
          document.getElementById("button").innerHTML = 'NEXT PLANET';
       }
       if(currPlanet==="jupiter"){
+         document.getElementById("mars1").className = "revolve";
          document.getElementById("button").innerHTML = 'LETS GO!'
       }
       if(currPlanet==="saturn"){
+         document.getElementById("jupiter1").className = "revolve";
          document.getElementById("button").innerHTML = 'THIS IS FUN!'
       }
       if(currPlanet==="uranus"){
+         document.getElementById("saturn1").className = "revolve";
          document.getElementById("button").innerHTML = 'GO AHEAD!'
       }
       if(currPlanet==="neptune"){
+         document.getElementById("uranus1").className = "revolve";
          document.getElementById("button").innerHTML = 'LAST PLANET'
       }
       if(currPlanet==="null"){
+         document.getElementById("neptune1").className = "revolve";
          alert("YOU HAVE SUCCESSFULLY RECREATED THE SOLAR SYSTEM!")
       }
       event.target.classList.add("dropped");
-      event.target.classList.add("revolve");
 
       const draggableElement = document.getElementById(draggableElementData);
       draggableElement.classList.add("dragged");
-      // draggableElement.classList.add("orbit");
       draggableElement.setAttribute("draggable", "false");
       event.target.appendChild(document.getElementById(draggableElementData));
    }
