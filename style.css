@@ -102,6 +102,7 @@ body{
   }
 .droppable{
     position: relative;
+    /* left: -1px; */
     margin: auto;
     top: 0;
     left: 0;
@@ -130,9 +131,13 @@ body{
     animation: ccircle 10s infinite linear; 
     position: relative;
 }
-.venus1.dropped{
+/* .ven.dropped{
+    border-style: solid;
+    border-width: 0px;
+    color: white;
+    position: relative;
     animation: circle 20s infinite linear; 
-}
+} */
 .revolve{
     border: 0.22vmin dashed white;
     opacity: 1;
