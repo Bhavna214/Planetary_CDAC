@@ -86,7 +86,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  /* animation: circle 20s infinite linear;  */
+  animation-name: inherit;
 }
 
 #belt {
@@ -100,10 +100,8 @@ body{
     right: 0;
     bottom: 0;
   }
-
 .droppable{
     position: relative;
-    /* left: -1px; */
     margin: auto;
     top: 0;
     left: 0;
@@ -129,13 +127,24 @@ body{
     border-style: solid;
     border-width: 0px;
     color: white;
-   /* -webkit-animation: circle 10s infinite linear; */
     animation: ccircle 10s infinite linear; 
     position: relative;
 }
-
 .ven.dropped{
     animation: circle 20s infinite linear; 
+}
+.revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 20s infinite linear;
 }
 
 .droppable.dropped img{
@@ -229,7 +238,8 @@ body{
       -webkit-transform: rotateZ(360deg)
     }
   }
-@keyframes ccircle {
+
+  @keyframes ccircle {
     from {
       -webkit-transform: rotateZ(360deg)
     }
