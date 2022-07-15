@@ -130,7 +130,7 @@ body{
     animation: ccircle 10s infinite linear; 
     position: relative;
 }
-.ven.dropped{
+.venus1.dropped{
     animation: circle 20s infinite linear; 
 }
 .revolve{
