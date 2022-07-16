@@ -50,16 +50,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
+    /* font-size: 4rem; */
     cursor: move;
     transition: opacity 0.2s;
 }
 
- .droppable-elements{
+.droppable-elements{
     display: flex;
     align-items: center;
     justify-content: center;
-    float: left;
+    float: center;
     width: 100%;;
 }
 
@@ -103,13 +103,13 @@ body{
 .droppable{
     position: relative;
     margin: auto;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 4rem;
-    width: 4rem;
+    height: 3.5rem;
+    width: 3.5rem;
     border-radius: 100%;
     background-color: transparent;
     border: 2px white solid;
@@ -130,6 +130,7 @@ body{
     color: white;
     animation: ccircle 10s infinite linear; 
     position: relative;
+/*     box-shadow: 5px 10px 18px #e7eabf; */
 }
 .venus1.dropped{
     animation: circle 20s infinite linear; 
@@ -169,8 +170,7 @@ body{
     width: 15%;
     height: 20%;
     background: transparent;
-    border: 2px solid white;
-    /* box-shadow: 5px 10px 18px #ffffff; */
+    /* border: 2px solid white; */
     margin: 3rem;
     margin-right: 1rem;
     border-radius: 20px;
@@ -220,6 +220,7 @@ body{
     border: 3px solid black;
     display: flex;
     flex-wrap: wrap;
+    box-shadow: 5px 10px 18px #ffffff;
 }
 
 #mercury{
