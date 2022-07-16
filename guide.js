@@ -10,6 +10,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="venus";
         
     }
 
@@ -22,6 +23,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="mars";
     }
 
     if(currGuide==="mars"){
@@ -33,6 +35,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="uranus"
     }
 
     if(currGuide==="uranus"){
@@ -44,6 +47,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="earth";
     }
 
     if(currGuide==="earth"){
@@ -55,6 +59,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="mercury";
     }
 
     if(currGuide==="mercury"){
@@ -66,6 +71,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="neptune";
     }
 
     if(currGuide==="neptune"){
@@ -77,6 +83,7 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
+        currGuide="saturn";
     }
 
     if(currGuide==="saturn"){
@@ -88,5 +95,6 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
+        currGuide=null;
     }
 }
