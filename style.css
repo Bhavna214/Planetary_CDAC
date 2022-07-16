@@ -10,6 +10,7 @@ body{
     background-color: black;
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
+    margin-left: 2rem;
 }
 
 .content {
@@ -44,9 +45,9 @@ body{
 }
 
 .draggable{
-    /* height: 10rem;
-    width: 10rem; */
-    margin: -2rem;
+    height: 6.75rem;
+    width: 6.75rem;
+    margin: -1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,13 +129,10 @@ body{
     border-style: solid;
     border-width: 0px;
     color: white;
-    animation: ccircle 10s infinite linear; 
+    /* animation: ccircle 10s infinite linear;  */
     position: relative;
 }
-.venus1.dropped{
-    animation: circle 20s infinite linear; 
-}
-.revolve{
+.mercury-revolve{
     border: 0.22vmin dashed white;
     opacity: 1;
     background: transparent;
@@ -145,7 +143,98 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    animation: ccircle 20s infinite linear;
+    animation: ccircle 2s infinite linear;
+}
+.venus-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 5s infinite linear;
+}
+.earth-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 10s infinite linear;
+}
+.mars-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 13s infinite linear;
+}
+.jupiter-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 16s infinite linear;
+}
+.saturn-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 19s infinite linear;
+}
+.uranus-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 21s infinite linear;
+}
+.neptune-revolve{
+    border: 0.22vmin dashed white;
+    opacity: 1;
+    background: transparent;
+    border-radius: 50%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: ccircle 24s infinite linear;
 }
 
 .droppable.dropped img{
@@ -223,43 +312,51 @@ body{
 }
 
 #mercury{
-    width: 7.5rem;
-    height: 7.5rem;
+    width: 6.75rem;
+    height: 6.75rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 #venus{
-    width: 8.5rem;
-    height: 8.5rem;
+    width: 8rem;
+    height: 8rem;
+    animation: circle 10s infinite linear; 
 }
 
 #earth{
-    width: 8.75rem;
-    height: 8.75rem;
+    width: 9rem;
+    height: 9rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 #mars{
-    width: 8.6rem;
-    height: 8.6rem;
+    width: 8rem;
+    height: 8rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 #jupiter{
-    height: 10.75rem;
-    width: 10.75rem;
+    height: 11rem;
+    width: 11rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 #saturn{
-    height: 9.75rem;
-    width: 9.75rem;
+    height: 10rem;
+    width: 10rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 #uranus{
     width: 9.25rem;
     height: 9.25rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 #neptune{
     width: 9rem;
     height: 9rem;
+    animation: ccircle 10s infinite linear; 
 }
 
 @media (max-width:600px){
