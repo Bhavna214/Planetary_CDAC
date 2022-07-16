@@ -320,7 +320,7 @@ body{
 #venus{
     width: 8rem;
     height: 8rem;
-    animation: circle 10s infinite linear; 
+    animation: circle 3s infinite linear; 
 }
 
 #earth{
