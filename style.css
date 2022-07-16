@@ -31,7 +31,7 @@ body{
 
 .draggable-elements{
     border: 2px solid white;
-    background-color: white;
+    background-color: rgb(197, 192, 192);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,6 +76,7 @@ body{
     animation: ccircle 20s infinite linear; 
   }
   
+.mercury-revolve,.venus-revolve,.earth-revolve,.mars-revolve,.jupiter-revolve,.saturn-revolve,.uranus-revolve,.neptune-revolve,
 .orbit{
   border: 0.22vmin dashed white;
   opacity: 1;
@@ -87,7 +88,6 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  animation-name: inherit;
 }
 
 #belt {
@@ -133,107 +133,27 @@ body{
     position: relative;
 }
 .mercury-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 2s infinite linear;
 }
 .venus-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 5s infinite linear;
 }
 .earth-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 10s infinite linear;
 }
 .mars-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 13s infinite linear;
 }
 .jupiter-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 16s infinite linear;
 }
 .saturn-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 19s infinite linear;
 }
 .uranus-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 21s infinite linear;
 }
 .neptune-revolve{
-    border: 0.22vmin dashed white;
-    opacity: 1;
-    background: transparent;
-    border-radius: 50%;
-    position: absolute;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     animation: ccircle 24s infinite linear;
 }
 
