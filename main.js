@@ -36,7 +36,7 @@ planets.forEach((planet, index) =>{
    }
    else if(index == 7){
       planet.style.top = `${0.5*p_radii[index]}vmin`;
-      planet.style.left = `${-0.5*p_radii[index]}vmin`
+      planet.style.left = `${-0.45*p_radii[index]}vmin`
    }
 })
 
