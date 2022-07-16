@@ -1,22 +1,16 @@
 function OKbutton(){
     var currGuide="jupiter";
-    // var firstPos = "It is closest to the sun!";
-    // var secondPos = "It is the hottest planet but placed after Mercury!";
-    // var thirdPos = "The planets before the Milky way are Terrestrial Planets. It is the second-last Terrestrial planet.";
 
     if(currGuide==="jupiter"){
         if(document.getElementById("button").innerHTML==='OKAY'){
             var firstText = "Drag the largest planet in the solar system! It is a gas giant and its colour changes with storms and wind in the planet's atmosphere. Here, drag the planet yellowish-brown in colour!";
             document.getElementById("instruct").innerHTML = '<div>'+ firstText + '</div>'
         }
-    
+        
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:8rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-        // if (document.getElementById("instruct").innerHTML === firstPos){
-        //     currGuide="venus";
-        // }
-        currGuide="venus";
+        
     }
 
     if(currGuide==="venus"){
@@ -26,13 +20,8 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:10rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-
-        // if (document.getElementById("instruct").innerHTML === secondPos){
-        //     currGuide="earth";
-        // }
-        currGuide="mars";
     }
 
     if(currGuide==="mars"){
@@ -42,12 +31,8 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:10rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-        // if (document.getElementById("instruct").innerHTML === thirdPos){
-        //     currGuide="mars";
-        // }
-        currGuide="uranus";
     }
 
     if(currGuide==="uranus"){
@@ -57,9 +42,8 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:10rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-        currGuide="earth"
     }
 
     if(currGuide==="earth"){
@@ -69,9 +53,8 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:10rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-        currGuide="mercury"
     }
 
     if(currGuide==="mercury"){
@@ -81,9 +64,8 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:10rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-        currGuide="neptune"
     }
 
     if(currGuide==="neptune"){
@@ -93,9 +75,8 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:10rem; width:10rem;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
         }
-        currGuide="saturn"
     }
 
     if(currGuide==="saturn"){
@@ -107,7 +88,5 @@ function OKbutton(){
         if(document.getElementById("button").innerHTML==='YES'){
             document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
-        currGuide=null
     }
 }
-
