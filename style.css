@@ -30,7 +30,7 @@ body{
 
 .draggable-elements{
     border: 2px solid white;
-    background-color: gray;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,8 +44,8 @@ body{
 }
 
 .draggable{
-    height: 10rem;
-    width: 10rem;
+    /* height: 10rem;
+    width: 10rem; */
     margin: -2rem;
     display: flex;
     align-items: center;
@@ -102,8 +102,8 @@ body{
   }
 .droppable{
     position: relative;
-    /* left: -1px; */
     margin: auto;
+    margin-top: 2rem;
     top: 0;
     left: 0;
     right: 0;
@@ -131,13 +131,9 @@ body{
     animation: ccircle 10s infinite linear; 
     position: relative;
 }
-/* .ven.dropped{
-    border-style: solid;
-    border-width: 0px;
-    color: white;
-    position: relative;
+.venus1.dropped{
     animation: circle 20s infinite linear; 
-} */
+}
 .revolve{
     border: 0.22vmin dashed white;
     opacity: 1;
@@ -173,7 +169,8 @@ body{
     width: 15%;
     height: 20%;
     background: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
+    /* box-shadow: 5px 10px 18px #ffffff; */
     margin: 3rem;
     margin-right: 1rem;
     border-radius: 20px;
@@ -223,6 +220,46 @@ body{
     border: 3px solid black;
     display: flex;
     flex-wrap: wrap;
+}
+
+#mercury{
+    width: 7.5rem;
+    height: 7.5rem;
+}
+
+#venus{
+    width: 8.5rem;
+    height: 8.5rem;
+}
+
+#earth{
+    width: 8.75rem;
+    height: 8.75rem;
+}
+
+#mars{
+    width: 8.6rem;
+    height: 8.6rem;
+}
+
+#jupiter{
+    height: 10.75rem;
+    width: 10.75rem;
+}
+
+#saturn{
+    height: 9.75rem;
+    width: 9.75rem;
+}
+
+#uranus{
+    width: 9.25rem;
+    height: 9.25rem;
+}
+
+#neptune{
+    width: 9rem;
+    height: 9rem;
 }
 
 @media (max-width:600px){
