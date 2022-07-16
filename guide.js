@@ -4,13 +4,13 @@ function OKbutton(){
     if(currGuide==="jupiter"){
         if(document.getElementById("button").innerHTML==='OKAY'){
             var firstText = "Drag the largest planet in the solar system! It is a gas giant and its colour changes with storms and wind in the planet's atmosphere. Here, drag the planet yellowish-brown in colour!";
-            document.getElementById("instruct").innerHTML = '<div>'+ firstText + '</div>'
+            document.getElementById("instruct").innerHTML = '<div>'+ firstText + '</div>'            
         }
         
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
-        currGuide="venus";
+        currGuide="venus";  
         
     }
 
@@ -21,7 +21,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="mars";
     }
@@ -33,7 +33,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="uranus"
     }
@@ -45,7 +45,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="earth";
     }
@@ -57,7 +57,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="mercury";
     }
@@ -69,7 +69,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="neptune";
     }
@@ -81,7 +81,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg"></img>'
+            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="saturn";
     }
