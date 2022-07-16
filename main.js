@@ -1,6 +1,6 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
-var nextPlanet= "jupiter";
+var currPlanet= "jupiter";
 
 draggableElements.forEach(elem => {
    elem.addEventListener("dragstart", dragStart);
@@ -15,7 +15,7 @@ droppableElements.forEach(elem => {
    elem.addEventListener("drop", drop);
 })
 
-const planets = document.querySelectorAll('.droppable')
+const planets = document.querySelectorAll('.planet')
 const p_radii = [127,112,97,84,60,50,35,25]
 
 const p_orbits = document.querySelectorAll('.orbit')
@@ -26,14 +26,26 @@ p_orbits.forEach((p_orbit, index)=>{
 })
 
 planets.forEach((planet, index) =>{
-   if(index == 4 || index == 6 || index == 2 || index == 0){
+   if(index == 4 || index == 6){
       planet.style.top= `${0.5*p_radii[index]}vmin`;
       planet.style.left = `${0.5*p_radii[index]}vmin`}
-   else if(index == 1 || index == 3 || index == 5){
+   else if(index == 1){
       planet.style.top = `${0.5*p_radii[index]}vmin`;
       planet.style.left = `${-0.5*p_radii[index]}vmin`
    }
    else if(index == 7){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${-0.45*p_radii[index]}vmin`
+   }
+   else if(index == 2 || index == 0){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${0.5*p_radii[index]}vmin`
+   }
+   else if(index == 3){
+      planet.style.top = `${0.5*p_radii[index]}vmin`;
+      planet.style.left = `${-0.5*p_radii[index]}vmin`
+   }
+   else if(index == 5){
       planet.style.top = `${0.5*p_radii[index]}vmin`;
       planet.style.left = `${-0.5*p_radii[index]}vmin`
    }
@@ -42,18 +54,19 @@ planets.forEach((planet, index) =>{
 // Drag and drop functions
 
 function dragStart(event) {
-   switch(nextPlanet){
+   switch(currPlanet){
       case "jupiter":
          if (event.target.id === "jupiter") {
             event.dataTransfer.setData("text", event.target.id);
             var firstPos = "It comes right after the milky way.";
             document.getElementById("instruct").innerHTML = '<div>' + firstPos + '</div>'
+            currPlanet="venus";
          }
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'            
+            document.getElementById("button").innerHTML = 'YES'
+            currPlanet="jupiter";
          }
-         currPlanet="jupiter";
          break
 
       case "venus":
@@ -61,12 +74,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var secondPos = "It is the hottest planet but placed after Mercury!";
             document.getElementById("instruct").innerHTML = '<div>' + secondPos + '</div>'
+            currPlanet="mars"
          }
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
             document.getElementById("button").innerHTML = 'YES'
+            currPlanet="venus"
          }
-         currPlanet="venus"
          break
 
       case "mars":
@@ -74,12 +88,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var thirdPos = "It comes right before the milky way.";
             document.getElementById("instruct").innerHTML = '<div>' + thirdPos + '</div>'
+            currPlanet="uranus"
          }
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
             document.getElementById("button").innerHTML = 'YES'
+            currPlanet="mars"
          }
-         currPlanet="mars"
          break
 
       case "uranus":
@@ -87,12 +102,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var fourthPos = "It is the second-last planet in the solar system and is a neighbour of Saturn!";
             document.getElementById("instruct").innerHTML = '<div>' + fourthPos + '</div>'
+            currPlanet="earth"
          }
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
             document.getElementById("button").innerHTML = 'YES'
+            currPlanet="uranus"
          }
-         currPlanet="uranus"
          break
 
       case "earth":
@@ -100,12 +116,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var fifthPos = "The planets before the Milky way are Terrestrial Planets. It is the second-last Terrestrial planet. ";
             document.getElementById("instruct").innerHTML = '<div>' + fifthPos + '</div>'
+            currPlanet="mercury"
          }
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
             document.getElementById("button").innerHTML = 'YES'
+            currPlanet="earth"
          }
-         currPlanet="earth"
          break
 
       case "mercury":
@@ -113,12 +130,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var sixthPos = "It is closest to the sun!";
             document.getElementById("instruct").innerHTML = '<div>' + sixthPos + '</div>'
+            currPlanet="neptune"
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Here is a closer picture<img src="Wrong/Mercury-sun.jpg"></img></div>'
+            // document.getElementById("button").innerHTML = 'YES'
+            currPlanet="mercury"
          }
-         currPlanet="mercury"
          break
 
       case "neptune":
@@ -126,12 +144,13 @@ function dragStart(event) {
             event.dataTransfer.setData("text", event.target.id);
             var seventhPos = "It is the last planet in the solar system.";
             document.getElementById("instruct").innerHTML = '<div>' + seventhPos + '</div>'
+            currPlanet="saturn"
          }
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
             document.getElementById("button").innerHTML = 'YES'
+            currPlanet="neptune"
          }
-         currPlanet="neptune"
          break
 
       case "saturn":
@@ -144,8 +163,8 @@ function dragStart(event) {
          else {
             document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
             document.getElementById("button").innerHTML = 'YES'
+            currPlanet="saturn"
          }
-         currPlanet="saturn"
          break
 
       case null:
@@ -173,45 +192,33 @@ function drop(event) {
    const draggableElementData = event.dataTransfer.getData("text");
    const droppableElementData = event.target.getAttribute("data-draggable-id")
    if (draggableElementData === droppableElementData) {
-      if(currPlanet==="jupiter"){
+      if(currPlanet==="venus"){
          document.getElementById("jupiter1").className = "revolve";
          document.getElementById("button").innerHTML = 'NEXT';
-         nextPlanet="venus";
-      }
-      if(currPlanet==="venus"){
-         document.getElementById("venus1").className = "revolve";
-         document.getElementById("button").innerHTML = 'NEXT';
-         nextPlanet="mars";
       }
       if(currPlanet==="mars"){
-         document.getElementById("mars1").className = "revolve";
+         document.getElementById("venus1").className = "revolve";
          document.getElementById("button").innerHTML = 'LETS MOVE AHEAD!';
-         nextPlanet="uranus";
       }
       if(currPlanet==="uranus"){
-         document.getElementById("uranus1").className = "revolve";
+         document.getElementById("mars1").className = "revolve";
          document.getElementById("button").innerHTML = 'NEXT PLANET';
-         nextPlanet="earth";
       }
       if(currPlanet==="earth"){
-         document.getElementById("earth1").className = "revolve";
+         document.getElementById("uranus1").className = "revolve";
          document.getElementById("button").innerHTML = 'LETS GO!'
-         nextPlanet="mercury";
       }
       if(currPlanet==="mercury"){
-         document.getElementById("mercury1").className = "revolve";
+         document.getElementById("earth1").className = "revolve";
          document.getElementById("button").innerHTML = 'THIS IS FUN!'
-         nextPlanet="neptune";
       }
       if(currPlanet==="neptune"){
-         document.getElementById("neptune1").className = "revolve";
+         document.getElementById("mercury1").className = "revolve";
          document.getElementById("button").innerHTML = 'GO AHEAD!'
-         nextPlanet="saturn";
       }
       if(currPlanet==="saturn"){
-         document.getElementById("saturn1").className = "revolve";
+         document.getElementById("neptune1").className = "revolve";
          document.getElementById("button").innerHTML = 'LAST PLANET'
-         nextPlanet="null";
       }
       if(currPlanet==="null"){
          document.getElementById("saturn1").className = "revolve";
@@ -225,3 +232,4 @@ function drop(event) {
       event.target.appendChild(document.getElementById(draggableElementData));
    }
 }
+
