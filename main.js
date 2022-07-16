@@ -51,8 +51,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + firstPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'            
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Jupiter.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="jupiter";
          break
@@ -64,8 +64,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + secondPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Venus.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="venus"
          break
@@ -77,8 +77,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + thirdPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Mars.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="mars"
          break
@@ -90,8 +90,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + fourthPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Uranus.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="uranus"
          break
@@ -103,8 +103,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + fifthPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Earth.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="earth"
          break
@@ -116,8 +116,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + sixthPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Mercury.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="mercury"
          break
@@ -129,8 +129,8 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = '<div>' + seventhPos + '</div>'
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Neptune.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="neptune"
          break
@@ -143,8 +143,8 @@ function dragStart(event) {
             currPlanet=null
          }
          else {
-            document.getElementById("instruct").innerHTML = '<div>Going wrong somewhere?Need a Closer picture?</div>'
-            document.getElementById("button").innerHTML = 'YES'
+            document.getElementById("instruct").innerHTML='<div>Going wrong somewhere...<br>Look at this closer picture a Closer picture</div><img src="closeup-images/Saturn.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("button").style.display = 'none';
          }
          currPlanet="saturn"
          break
@@ -176,43 +176,49 @@ function drop(event) {
    if (draggableElementData === droppableElementData) {
       if(currPlanet==="jupiter"){
          document.getElementById("jupiter1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'NEXT';
          nextPlanet="venus"
       }
       if(currPlanet==="venus"){
          document.getElementById("venus1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'LETS MOVE AHEAD!';
          nextPlanet="mars";
       }
       if(currPlanet==="mars"){
          document.getElementById("mars1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'NEXT PLANET';
          nextPlanet="uranus";
       }
       if(currPlanet==="uranus"){
          document.getElementById("uranus1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'LETS GO!';
          nextPlanet="earth";
       }
       if(currPlanet==="earth"){
          document.getElementById("earth1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'THIS IS FUN!';
          nextPlanet="mercury";
       }
       if(currPlanet==="mercury"){
          document.getElementById("mercury1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'GO AHEAD!'
          nextPlanet="neptune";
       }
       if(currPlanet==="neptune"){
          document.getElementById("neptune1").className = "revolve";
+         document.getElementById("button").style.display = 'flex';
          document.getElementById("button").innerHTML = 'LAST PLANET'
          nextPlanet="saturn";
       }
       if(currPlanet==="saturn"){
          document.getElementById("saturn1").className = "revolve";
-         document.getElementById("button").innerHTML = 'YOU HAVE SUCCESSFULLY RECREATED THE SOLAR SYSTEM!'
-         document.getElementById("instruct").innerHTML = ""
+         document.getElementById("instruct").innerHTML = 'YOU HAVE SUCCESSFULLY RECREATED THE SOLAR SYSTEM!'
          nextPlanet="null";
       }
       if(currPlanet==="null"){
