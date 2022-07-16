@@ -8,7 +8,7 @@ function OKbutton(){
         }
         
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Jupiter.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="venus";  
         
@@ -21,7 +21,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Venus.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="mars";
     }
@@ -33,7 +33,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Mars.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="uranus"
     }
@@ -45,7 +45,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Uranus.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="earth";
     }
@@ -57,7 +57,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Earth.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="mercury";
     }
@@ -69,7 +69,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Mercury.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="neptune";
     }
@@ -81,7 +81,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Neptune.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide="saturn";
     }
@@ -93,7 +93,7 @@ function OKbutton(){
         }
     
         if(document.getElementById("button").innerHTML==='YES'){
-            document.getElementById("instruct").innerHTML='<img src="images/Mercury-sun.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='<img src="closeup-images/Saturn.jpg" style="height:100%; width:100%;"></img>'
         }
         currGuide=null;
     }
