@@ -104,8 +104,10 @@
 }
 
 #neptune{
-    width: 9rem;
-    height: 9rem;
+    width: 5.75rem;
+    height: 5.75rem;
+    padding: 1rem;
+    /* margin-top: 0rem; */
     animation: ccircle 10s infinite linear; 
 }
 
