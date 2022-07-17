@@ -60,10 +60,19 @@
                 Hello I am Dexter! I will be helping you to recreate the Solar System!
             </div>
             <button onclick="OKbutton()" id="button">OKAY</button>
-            </div>
+            <button onclick="nasaRequest()" style="color: red;">DID YOU KNOW?</button>
+        </div>
+        <div class="alert" id="alert" style="display: none;">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <h3 id="title"></h3>
+            <img src="" alt="" id="img">
+            <p id="explaination">Indicates a dangerous or potentially negative action.</p>
+        </div>
     </section>
 </div>
+    <script src="javascripts/facts.js"></script>
     <script src="javascripts/guide.js"></script>
     <script src="javascripts/orbits.js"></script>
   </body>
 </html>
+
