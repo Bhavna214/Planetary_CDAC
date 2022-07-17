@@ -34,7 +34,7 @@ body{
 
 .draggable-elements{
     border: 2px solid white;
-    background-color: rgb(250, 248, 248);
+    background-color: rgba(250, 248, 248,0.75);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ body{
     margin-left: 2rem;
     margin-top: 2rem;
     max-height:fit-content;
-    width: fit-content;
+    width: 13.5rem;
 }
 
 .draggable{
@@ -53,6 +53,7 @@ body{
     justify-content: center;
     cursor: grab;
     transition: opacity 0.2s;
+    clip-path: circle(40%);;
 }
 
 .droppable-elements{
