@@ -1,9 +1,10 @@
 var arr = [];
 var i = 0;
-while(arr.length < 8){
-   var r = Math.floor(Math.random() * 8) + 1;
-   if(arr.indexOf(r) === -1) arr.push(r);
-}
+arr=[1,2,3,4,5,6,7,8]
+// while(arr.length < 8){
+//    var r = Math.floor(Math.random() * 8) + 1;
+//    if(arr.indexOf(r) === -1) arr.push(r);
+// }
 console.log(arr);
 
 var currPlanet=arr[0];
@@ -36,18 +37,18 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Mercury.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Mercury.jpg"></img>'
          }
          currPlanet=1
          break
       case 2:
          if (event.target.id === "venus") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "It is the hottest planet but placed after Mercury!";
+            Pos = "It is the hottest planet but comes after Mercury<br>(not the sun)";
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Venus.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Venus.jpg"></img>'
          }
          currPlanet=2
          break
@@ -58,7 +59,7 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Earth.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Earth.jpg"></img>'
          }
          currPlanet=3
          break
@@ -69,7 +70,7 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Mars.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Mars.jpg"></img>'
          }
          currPlanet=4
          break
@@ -80,7 +81,7 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Jupiter.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Jupiter.jpg"></img>'
          }
          currPlanet=5;
          break
@@ -91,7 +92,7 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Saturn.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Saturn.jpg"></img>'
          }
          currPlanet=6
          break
@@ -102,7 +103,7 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Uranus.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Uranus.jpg"></img>'
          }
          currPlanet=7
          break
@@ -113,7 +114,7 @@ function dragStart(event) {
             document.getElementById("instruct").innerHTML = Pos
          }
          else {
-            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture a Closer picture<img src="closeup-images/Neptune.jpg" style="height:100%; width:100%;"></img>'
+            document.getElementById("instruct").innerHTML='Going wrong somewhere...<br>Look at this closer picture<img src="closeup-images/Neptune.jpg"></img>'
          }
          currPlanet=8
          break     
