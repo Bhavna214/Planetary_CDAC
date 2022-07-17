@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Recreate the solar system</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/animation.css">
+    <script src="javascripts/main.js" defer></script>
   </head>
   <body>
     <video autoplay muted loop id="background_video">
         <source src="stars_bg.mp4" type="video/mp4">
     </video>
-    <div class="content">
-	<section class="draggable-elements">
+    <div id="content" class="Content">
+	<section class="draggable-elements" id="draggable-elements">
         <img src="images/Uranus.png" alt="" id="uranus" class="draggable" draggable="true">
         <img src="images/Earth.png" alt="" id="earth" class="draggable" draggable="true">
         <img src="images/Neptune.png" alt="" id="neptune" class="draggable" draggable="true">
@@ -45,14 +46,14 @@
             <div class="droppable" data-draggable-id="earth" ></div> 
         </div>
         <div class="orbit" id="venus1">
-            <div class="droppable  ven" id="ven" data-draggable-id="venus"></div>
+            <div class="droppable" data-draggable-id="venus"></div>
         </div>
         <div class="orbit" id="mercury1">
             <div class="droppable" data-draggable-id="mercury" ></div> 
         </div>
     </section>
 
-    <section class="guide">
+    <section class="guide" id="guide">
         <img src="images/robot.png" alt="">
         <div>
             <div class="instructions" id="instruct">
@@ -62,6 +63,7 @@
             </div>
     </section>
 </div>
-    <script src="guide.js"></script>
+    <script src="javascripts/guide.js"></script>
+    <script src="javascripts/orbits.js"></script>
   </body>
 </html>
