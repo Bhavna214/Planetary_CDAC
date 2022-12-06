@@ -30,7 +30,7 @@ function dexter_voice(){
   if ('speechSynthesis' in window) {
  
     let voices = getVoices();
-    let rate = 1, pitch = 0, volume = 1;
+    let rate = 1, pitch = 1, volume = 1;
     let text = document.getElementById("instruct").innerText;
   
     speak(text, voices[5], rate, pitch, volume);
