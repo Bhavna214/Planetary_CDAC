@@ -1,16 +1,10 @@
-
-  if ('speechSynthesis' in window) {
- 
-    
+if ('speechSynthesis' in window) {
     let rate = 1, pitch = 1.5, volume = 1;
     let text = document.getElementById("instruct").innerText;
-  
     speak(text, voices[5], rate, pitch, volume);
-  
   }else{
     console.log(' Speech Synthesis Not Supported 😞'); 
   }
-
 
 function OKbutton(){
     document.getElementById("button").style.display = 'none'; 
@@ -40,6 +34,5 @@ function OKbutton(){
       Text = "Drag the dark, cold and windy planet!<br>(It's colour is dark blue.)";
     } 
     document.getElementById("instruct").innerHTML = Text
-
     dexter_voice();
  }
