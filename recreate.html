@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/animation.css">
     <link rel="stylesheet" href="styles/elements.css">
     <link rel="stylesheet" href="styles/guide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="javascripts/main.js" defer></script>
   </head>
   <style>
@@ -64,10 +65,11 @@
 
         <section class="guide" id="guide">
             <img id="guide-img" src="cartoon-robot.png" alt="astraunaut"></img>
-                <div class="instructions" id="instruct">
+                <div class="instructions to-text" id="instruct">
                     Hello I am Dexter! I will be helping you to recreate the Solar System!
                 </div>
                 <button onclick="OKbutton()" id="button">LET'S GO</button>
+                <button onclick="showAlert()">Click here to trigger the modal!</button>
                 
             </div>
             <div class="alert" id="alert" style="display: none;">
@@ -76,6 +78,16 @@
                 <h2 id="title"></h2>
                 <img src="" alt="Loading....." id="img">
                 <p id="explaination"></p>
+            </div>
+
+            <div class="alert" id="alert1" style="display: none;">
+                <span class="closebtn" onclick="closeAlert1()">&times;</span>
+                <h3>CHOOSE A LANGUAGE:</h3>
+                <select name="" id="">
+                    <option>hi</option>  
+                    <option>pa</option>
+                </select>
+                <button class="translate">Translate</button>
             </div>
             
         </section> 
@@ -87,7 +99,8 @@
     <script src="javascripts/orbits.js"></script>
     <script src="javascripts/guide.js"></script>
     <script>
-        function dexter_voice(){
+        var lang;
+        function dexter_voice(lang, translatedText){
    function getVoices() {
       let voices = speechSynthesis.getVoices();
       if(!voices.length){
@@ -108,7 +121,7 @@
       speakData.rate = rate; // From 0.1 to 10
       speakData.pitch = pitch; // From 0 to 2
       speakData.text = text;
-      speakData.lang = 'en';
+      speakData.lang = lang;
       speakData.voice = voice;
       
       // pass the SpeechSynthesisUtterance to speechSynthesis.speak to start speaking 
@@ -120,7 +133,7 @@
    
       let voices = getVoices();
       let rate = 1, pitch = 1, volume = 1;
-      let text = document.getElementById("instruct").innerText;
+      let text = translatedText;
     
       speak(text, voices[5], rate, pitch, volume);
     //   for(i=0; i<voices.length; i++){
@@ -131,7 +144,57 @@
       console.log(' Speech Synthesis Not Supported 😞'); 
     }
 }
-dexter_voice();
+// dexter_voice();
+
+function showAlert(){
+    document.getElementById("alert1").style.display="block"
+}
+
+function closeAlert1(){
+    document.getElementById("alert1").style.display="none"
+}
+
+
+
+// for (const country_code in countries) {
+//    // let selected;
+//    // if(id==0 && country_code == "en-GB"){
+//    //     selected="selected";
+
+//    // }else if(id==1 && country_code == "hi-IN"){
+//    //     selected="selected";
+//    // }
+//    console.log(countries[country_code]);
+
+//    // let option=`<option value="${country_code}" ${selected}>${countries[country_code]}</option>`;
+//    // tag.insertAdjacentHTML("beforeend",option);
+  
+// }
+
+const formText=document.querySelector("#instruct");
+const toText=document.querySelector(".to-text");
+selectTag=document.querySelector("select");
+translatorBtn=document.querySelector(".translate");
+translateFrom="en",
+translateTo=selectTag.value;
+
+translatorBtn.addEventListener("click",()=>{
+    let text=document.getElementById("instruct").innerText
+    if(!text)return;
+    // toText.setAttribute("placeholder","Translating..");
+
+    let api_url="https://api.mymemory.translated.net/get?q="+text+"&langpair="+translateFrom+"|"+translateTo;
+    fetch(api_url).then(res=>res.json()).then(data=>{
+    // console.log(data);
+    // document.getElementById("instruct").innerText=data.responseData.translatedText;
+    translatedText = data.responseData.translatedText;
+    toText.setAttribute("placeholder","Translation");
+    dexter_voice(translateTo, translatedText)
+
+});
+
+
+});
     </script>
   </body>
 </html>
