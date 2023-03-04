@@ -84,8 +84,9 @@
                 <span class="closebtn" onclick="closeAlert1()">&times;</span>
                 <h3>CHOOSE A LANGUAGE:</h3>
                 <select name="" id="">
-                    <option>hi</option>  
-                    <option>pa</option>
+                    <option>en</option>
+                    <option>hi</option>
+                    <option>gu</option> 
                 </select>
                 <button class="translate">Translate</button>
             </div>
@@ -184,25 +185,61 @@ const toText=document.querySelector(".to-text");
 selectTag=document.querySelector("select");
 translatorBtn=document.querySelector(".translate");
 translateFrom="en",
-translateTo=selectTag.value;
 
 translatorBtn.addEventListener("click",()=>{
+    // translateTo=selectTag.value;
+    translateTo = selectTag.value
     let text=document.getElementById("instruct").innerText
     if(!text)return;
     // toText.setAttribute("placeholder","Translating..");
 
-    let api_url="https://api.mymemory.translated.net/get?q="+text+"&langpair="+translateFrom+"|"+translateTo;
-    fetch(api_url).then(res=>res.json()).then(data=>{
-    // console.log(data);
-    // document.getElementById("instruct").innerText=data.responseData.translatedText;
-    translatedText = data.responseData.translatedText;
-    toText.setAttribute("placeholder","Translation");
-    dexter_voice(translateTo, translatedText)
+    if(translateTo == "hi" || translateTo == "gu"){
+        let api_url="https://api.mymemory.translated.net/get?q="+text+"&langpair="+translateFrom+"|"+translateTo;
+        fetch(api_url).then(res=>res.json()).then(data=>{
+        // console.log(data);
+        // document.getElementById("instruct").innerText=data.responseData.translatedText;
+        translatedText = data.responseData.translatedText;
+        toText.setAttribute("placeholder","Translation");
+        dexter_voice("hi", translatedText)
+    });
+    }
+
+    else{
+        dexter_voice("en", text)
+    }
+
 
 });
 
+// var translateFrom="en";
+// var translateTo=selectTag.value;
 
-});
+function translateLang(){
+   const toText=document.querySelector(".to-text");
+
+   let text=document.getElementById("instruct").innerText
+   if(!text)return;
+   console.log(text)
+   // toText.setAttribute("placeholder","Translating..");
+
+   // text = OKbutton();
+
+   if(translateTo == "hi" || translateTo == "gu"){
+        let api_url="https://api.mymemory.translated.net/get?q="+text+"&langpair="+translateFrom+"|"+translateTo;
+        fetch(api_url).then(res=>res.json()).then(data=>{
+        // console.log(data);
+        // document.getElementById("instruct").innerText=data.responseData.translatedText;
+        translatedText = data.responseData.translatedText;
+        toText.setAttribute("placeholder","Translation");
+        dexter_voice("hi", translatedText)
+    });
+    }
+
+    else{
+        dexter_voice("en", text)
+    }
+}
+
     </script>
   </body>
 </html>

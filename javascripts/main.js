@@ -107,29 +107,29 @@ const countries = {
 // const toText=document.querySelector(".to-text");
 // selectTag=document.querySelector("select");
 // translatorBtn=document.querySelector(".translate");
-var translateFrom="en";
-var translateTo=selectTag.value;
+// var translateFrom="en";
+// var translateTo=selectTag.value;
 
-function translateLang(){
-   const toText=document.querySelector(".to-text");
+// function translateLang(){
+//    const toText=document.querySelector(".to-text");
 
-   let text=document.getElementById("instruct").innerText
-   if(!text)return;
-   console.log(text)
-   // toText.setAttribute("placeholder","Translating..");
+//    let text=document.getElementById("instruct").innerText
+//    if(!text)return;
+//    console.log(text)
+//    // toText.setAttribute("placeholder","Translating..");
 
-   // text = OKbutton();
+//    // text = OKbutton();
 
-   let api_url="https://api.mymemory.translated.net/get?q="+text+"&langpair="+translateFrom+"|"+translateTo;
-   console.log(api_url)
-   fetch(api_url).then(res=>res.json()).then(data=>{
-   // console.log(data);
-   // document.getElementById("instruct").innerText=data.responseData.translatedText;
-   translatedText = data.responseData.translatedText;
-   toText.setAttribute("placeholder","Translation");
-   dexter_voice(translateTo, translatedText)
-   });
-}
+//    let api_url="https://api.mymemory.translated.net/get?q="+text+"&langpair="+translateFrom+"|"+translateTo;
+//    console.log(api_url)
+//    fetch(api_url).then(res=>res.json()).then(data=>{
+//    // console.log(data);
+//    // document.getElementById("instruct").innerText=data.responseData.translatedText;
+//    translatedText = data.responseData.translatedText;
+//    toText.setAttribute("placeholder","Translation");
+//    dexter_voice(translateTo, translatedText)
+//    });
+// }
 
 while(arr.length < 8){
    var r = Math.floor(Math.random() * 8) + 1;
