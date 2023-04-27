@@ -117,3 +117,12 @@ body{
     color: red;
     display: block;
 }
+
+.trans1:hover{
+    background: gray;
+    color: white;
+}
+
+#alert1{
+    padding: 10px;
+}
