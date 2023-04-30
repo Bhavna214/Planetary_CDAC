@@ -163,13 +163,13 @@ droppableElements.forEach(elem => {
 
 function dragStart(event) {
    document.getElementById("button").style.display = 'none';
-   wrong_pos = "Going wrong somewhere...Take a closer look"
-   img_src = ''
+   wrong_pos = "Going wrong somewhere...Have closer look"
+   img_src = '' 
    switch(nextPlanet){
       case 1:
          if (event.target.id === "mercury") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "It is Mercury.<br>It is closest to the sun!";
+            Pos = "It is Mercury. It is closest to the sun!";
          }
          else {
             img_src = '<img src="closeup-images/Mercury.jpg"></img>'
@@ -179,16 +179,16 @@ function dragStart(event) {
       case 2:
          if (event.target.id === "venus") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "This is Venus which is the hottest planet but comes after Mercury<br>(not the sun)";
+            Pos = "This is Venus which is the hottest planet but comes after Mercury (not the sun)";
          }
          else {
             if(event.target.id === "jupiter"){
-               wrong_pos = "Going wrong somewhere? The correct planet is smaller in size than this.<br> Take a closer look."
+               wrong_pos = "Going wrong somewhere? The correct planet is smaller in size than this. Have a closer look."
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Venus.jpg"></img>'
             }
             if(event.target.id === "saturn"){
-               wrong_pos = "Going wrong somewhere? The correct planet does not have rings.<br> Take a closer look."
+               wrong_pos = "Going wrong somewhere? The correct planet does not have rings. Have a closer look."
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Venus.jpg"></img>'
             }
@@ -205,12 +205,12 @@ function dragStart(event) {
          }
          else {
             if(event.target.id === "neptune"){
-               wrong_pos = "Going wrong somewhere? The correct planet also has green spots which represents the land.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet also has green spots which represents the land. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Earth.jpg"></img>'
             }
             if(event.target.id === "uranus"){
-               wrong_pos = "Going wrong somewhere? The correct planet does not have rings.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet does not have rings. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Earth.jpg"></img>';
             }
@@ -223,11 +223,11 @@ function dragStart(event) {
       case 4:
          if (event.target.id === "mars") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "Yes, Mars!!<br>It comes right before the milky way.";
+            Pos = "Yes, Mars!! It comes right before the milky way.";
          }
          else {
             if(event.target.id === "jupiter"){
-               wrong_pos = "Going wrong somewhere? The correct planet is smaller in size than this.<br> Take a closer look."
+               wrong_pos = "Going wrong somewhere? The correct planet is smaller in size than this. Have a closer look."
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Mars.jpg"></img>'
             }
@@ -240,21 +240,21 @@ function dragStart(event) {
       case 5:
          if (event.target.id === "jupiter") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "That's right. Jupiter!<br>It comes right after the milky way."
+            Pos = "That's right. Jupiter! It comes right after the milky way."
          }
          else {
             if(event.target.id === "venus"){
-               wrong_pos = "Going wrong somewhere? The correct planet is larger in size than this.<br> Take a closer look."
+               wrong_pos = "Going wrong somewhere? The correct planet is larger in size than this. Have a closer look."
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Jupiter.jpg"></img>'
             }
             if(event.target.id === "mars"){
-               wrong_pos = "Going wrong somewhere? The correct planet is not completely red.<br> Take a closer look."
+               wrong_pos = "Going wrong somewhere? The correct planet is not completely red. Have a closer look."
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Jupiter.jpg"></img>'
             }
             if(event.target.id === "saturn"){
-               wrong_pos = "Going wrong somewhere? The correct planet does not have rings.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet does not have rings. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Jupiter.jpg"></img>';
             }
@@ -267,11 +267,11 @@ function dragStart(event) {
       case 6:
          if (event.target.id === "saturn") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "You are right, Saturn.<br>The planets after the Milky way are Jovian Planets. It is the second Jovian planet.";
+            Pos = "You are right, Saturn. The planets after the Milky way are Jovian Planets. It is the second Jovian planet.";
          }
          else {
             if(event.target.id === "uranus"){
-               wrong_pos = "Going wrong somewhere? The correct planet is yellowish in color with rings around it.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet is yellowish in color with rings around it. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Saturn.jpg"></img>';
             }
@@ -284,16 +284,16 @@ function dragStart(event) {
       case 7:
          if (event.target.id === "uranus") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "That's correct, Uranus!<br>It is the second-last planet in the solar system and is a neighbour of Saturn!";
+            Pos = "That's correct, Uranus! It is the second-last planet in the solar system and is a neighbour of Saturn!";
          }
          else {
             if(event.target.id === "saturn"){
-               wrong_pos = "Going wrong somewhere? The correct planet is blue in color with rings around it.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet is blue in color with rings around it. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Uranus.jpg"></img>';
             }
             if(event.target.id === "neptune"){
-               wrong_pos = "Going wrong somewhere? The correct planet has rings around it.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet has rings around it. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Uranus.jpg"></img>';
             }
@@ -306,16 +306,16 @@ function dragStart(event) {
       case 8:
          if (event.target.id === "neptune") {
             event.dataTransfer.setData("text", event.target.id);
-            Pos = "It is Neptune.<br>It is the last planet in the solar system.";
+            Pos = "It is Neptune. It is the last planet in the solar system.";
          }
          else {
             if(event.target.id === "mercury"){
-               wrong_pos = "Going wrong somewhere? The correct planet is blue in color.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet is blue in color. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Neptune.jpg"></img>';
             }
             if(event.target.id === "uranus"){
-               wrong_pos = "Going wrong somewhere? The correct planet does not have rings around it.<br> Take a closer look.";
+               wrong_pos = "Going wrong somewhere? The correct planet does not have rings around it. Have a closer look.";
                Pos = wrong_pos 
                img_src = '<img src="closeup-images/Neptune.jpg"></img>';
             }
@@ -342,11 +342,14 @@ function removeDuplicates(arr) {
 function dragEnter(event) {
    if (!event.target.classList.contains("dropped")) {
       event.target.classList.add("droppable-hover");
+      
    }
+   document.getElementById("close-up-image").style.display = 'none';
 }
 
 function dragOver(event) {
    event.preventDefault();
+   document.getElementById("close-up-image").style.display = 'none';
 }
 
 function dragLeave(event) {
@@ -372,6 +375,7 @@ function insertionSort(arr, n)
 function drop(event) {
    event.target.classList.remove("droppable-hover");
    event.preventDefault();
+   document.getElementById("close-up-image").style.display = 'none';
    const draggableElementData = event.dataTransfer.getData("text");
    const droppableElementData = event.target.getAttribute("data-draggable-id")
    // document.getElementById("button").innerHTML = "NEXT";
