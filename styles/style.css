@@ -118,8 +118,16 @@ body{
     display: block;
 }
 
+.translate{
+    background-color: rgb(166, 215, 231);
+    font-size: 1rem;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
 .trans1:hover{
-    background: gray;
+    background: rgb(163, 163, 163);
     color: white;
 }
 

@@ -68,6 +68,7 @@
                 <div class="instructions to-text" id="instruct">
                     Hello I am Dexter! I will be helping you to recreate the Solar System!
                 </div>
+                <div class="instructions" id="close-up-image" style="display: none;"></div>
                 <button onclick="OKbutton()" id="button">LET'S GO</button>
                 
             </div>
@@ -79,15 +80,14 @@
                 <p id="explaination"></p>
             </div>
 
-            <div class="alert" id="alert1" style="display: none;background-color: #139AAC; width:50%; height:30%">
-                
+            <div class="alert" id="alert1">
                 <div style="padding: 60px;">
-                    <h3 style="margin-bottom: 2rem; margin-top: 0;">CHOOSE A LANGUAGE:</h3>
-                    <select name="" id="" style="padding:5px">
+                    <h3 style="margin-bottom: 2rem; margin-top: 0; ">CHOOSE A LANGUAGE:</h3>
+                    <select name="" id="" style="padding:5px; border-width:1px;">
                         <option>ENGLISH</option>
                         <option>HINDI</option>
                     </select>
-                    <button class="translate trans1" onclick="closeAlert()" style="padding:5px">Translate</button>
+                    <button class="translate trans1"  onclick="closeAlert()" style="padding:5px">Translate</button>
                 </div>
             </div>
             
@@ -215,6 +215,8 @@ translatorBtn.addEventListener("click",()=>{
         translatedText = data.responseData.translatedText;
         toText.setAttribute("placeholder","Translation");
         dexter_voice("hi", translatedText)
+        document.getElementById("instruct").innerText = translatedText
+        document.getElementById('button').innerText = 'आइए शुरू करें'
     });
     }
 
@@ -231,9 +233,9 @@ translatorBtn.addEventListener("click",()=>{
 function translateLang(){
    const toText=document.querySelector(".to-text");
 
-   let text=document.getElementById("instruct").innerText
+   let text=document.getElementById("instruct").value
    if(!text)return;
-   console.log(text)
+//    console.log(text)
    // toText.setAttribute("placeholder","Translating..");
 
    // text = OKbutton();
@@ -246,11 +248,16 @@ function translateLang(){
         translatedText = data.responseData.translatedText;
         toText.setAttribute("placeholder","Translation");
         dexter_voice("hi", translatedText)
+        document.getElementById("instruct").innerHTML = translatedText
+        // console.log(translatedText)
+        document.getElementById('button').innerText = 'आगे बढ़े'
     });
     }
 
     else{
         dexter_voice("en", text)
+        document.getElementById("instruct").innerHTML = text
+        document.getElementById("button").innerHTML = "NEXT";
     }
 }
 

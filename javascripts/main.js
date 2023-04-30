@@ -163,7 +163,8 @@ droppableElements.forEach(elem => {
 
 function dragStart(event) {
    document.getElementById("button").style.display = 'none';
-   wrong_pos = "Going wrong somewhere...<br>Take a closer look"
+   wrong_pos = "Going wrong somewhere...Take a closer look"
+   img_src = ''
    switch(nextPlanet){
       case 1:
          if (event.target.id === "mercury") {
@@ -171,7 +172,8 @@ function dragStart(event) {
             Pos = "It is Mercury.<br>It is closest to the sun!";
          }
          else {
-            Pos = wrong_pos + '<img src="closeup-images/Mercury.jpg"></img>'
+            img_src = '<img src="closeup-images/Mercury.jpg"></img>'
+            Pos = wrong_pos 
          }
          break
       case 2:
@@ -182,14 +184,17 @@ function dragStart(event) {
          else {
             if(event.target.id === "jupiter"){
                wrong_pos = "Going wrong somewhere? The correct planet is smaller in size than this.<br> Take a closer look."
-               Pos = wrong_pos + '<img src="closeup-images/Venus.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Venus.jpg"></img>'
             }
             if(event.target.id === "saturn"){
                wrong_pos = "Going wrong somewhere? The correct planet does not have rings.<br> Take a closer look."
-               Pos = wrong_pos + '<img src="closeup-images/Venus.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Venus.jpg"></img>'
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Venus.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Venus.jpg"></img>'
             }
          }
          break
@@ -201,14 +206,17 @@ function dragStart(event) {
          else {
             if(event.target.id === "neptune"){
                wrong_pos = "Going wrong somewhere? The correct planet also has green spots which represents the land.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Earth.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Earth.jpg"></img>'
             }
             if(event.target.id === "uranus"){
                wrong_pos = "Going wrong somewhere? The correct planet does not have rings.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Earth.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Earth.jpg"></img>';
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Earth.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Earth.jpg"></img>'
             }
          }
          break
@@ -220,10 +228,12 @@ function dragStart(event) {
          else {
             if(event.target.id === "jupiter"){
                wrong_pos = "Going wrong somewhere? The correct planet is smaller in size than this.<br> Take a closer look."
-               Pos = wrong_pos + '<img src="closeup-images/Mars.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Mars.jpg"></img>'
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Mars.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Mars.jpg"></img>'
             }
          }
          break
@@ -235,18 +245,22 @@ function dragStart(event) {
          else {
             if(event.target.id === "venus"){
                wrong_pos = "Going wrong somewhere? The correct planet is larger in size than this.<br> Take a closer look."
-               Pos = wrong_pos + '<img src="closeup-images/Jupiter.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Jupiter.jpg"></img>'
             }
             if(event.target.id === "mars"){
                wrong_pos = "Going wrong somewhere? The correct planet is not completely red.<br> Take a closer look."
-               Pos = wrong_pos + '<img src="closeup-images/Jupiter.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Jupiter.jpg"></img>'
             }
             if(event.target.id === "saturn"){
                wrong_pos = "Going wrong somewhere? The correct planet does not have rings.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Jupiter.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Jupiter.jpg"></img>';
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Jupiter.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Jupiter.jpg"></img>'
             }
          }
          break
@@ -258,10 +272,12 @@ function dragStart(event) {
          else {
             if(event.target.id === "uranus"){
                wrong_pos = "Going wrong somewhere? The correct planet is yellowish in color with rings around it.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Saturn.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Saturn.jpg"></img>';
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Saturn.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Saturn.jpg"></img>'
             }
          }
          break
@@ -273,14 +289,17 @@ function dragStart(event) {
          else {
             if(event.target.id === "saturn"){
                wrong_pos = "Going wrong somewhere? The correct planet is blue in color with rings around it.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Uranus.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Uranus.jpg"></img>';
             }
             if(event.target.id === "neptune"){
                wrong_pos = "Going wrong somewhere? The correct planet has rings around it.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Uranus.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Uranus.jpg"></img>';
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Uranus.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Uranus.jpg"></img>'
             }
          }
          break
@@ -292,22 +311,27 @@ function dragStart(event) {
          else {
             if(event.target.id === "mercury"){
                wrong_pos = "Going wrong somewhere? The correct planet is blue in color.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Neptune.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Neptune.jpg"></img>';
             }
             if(event.target.id === "uranus"){
                wrong_pos = "Going wrong somewhere? The correct planet does not have rings around it.<br> Take a closer look.";
-               Pos = wrong_pos + '<img src="closeup-images/Neptune.jpg"></img>';
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Neptune.jpg"></img>';
             }
             else {
-               Pos = wrong_pos + '<img src="closeup-images/Neptune.jpg"></img>'
+               Pos = wrong_pos 
+               img_src = '<img src="closeup-images/Neptune.jpg"></img>'
             }
          }
          break     
    }
-   document.getElementById("instruct").innerHTML = Pos;
+   document.getElementById("instruct").value = Pos;
    currPlanet=nextPlanet;
    //dexter_voice();
    translateLang();
+   document.getElementById('close-up-image').style.display = 'flex'
+   document.getElementById('close-up-image').innerHTML = img_src;
 }
 
 function removeDuplicates(arr) {
@@ -350,7 +374,7 @@ function drop(event) {
    event.preventDefault();
    const draggableElementData = event.dataTransfer.getData("text");
    const droppableElementData = event.target.getAttribute("data-draggable-id")
-   document.getElementById("button").innerHTML = "NEXT";
+   // document.getElementById("button").innerHTML = "NEXT";
    if (draggableElementData === droppableElementData) {
       currPlanet=arr[i]
       document.getElementById("button").style.display = 'flex';
@@ -404,33 +428,33 @@ function drop(event) {
 
       if(error[index-1]==undefined && error[index+1]!=undefined){
          if (error[index]<=4){
-            document.getElementById("instruct").innerHTML= p+" lies between sun and "+ p2;
+            document.getElementById("instruct").value= p+" lies between sun and "+ p2;
          }
          else{
-            document.getElementById("instruct").innerHTML= p+ " lies between milkyway and "+p2;
+            document.getElementById("instruct").value= p+ " lies between milkyway and "+p2;
          }
       }
 
       else if(error[index-1]!=undefined && error[index+1]==undefined){
          if (error[index]<=4){
-            document.getElementById("instruct").innerHTML= p+" lies between " + p1 +" and milkyway";
+            document.getElementById("instruct").value= p+" lies between " + p1 +" and milkyway";
          }
          else{
-            document.getElementById("instruct").innerHTML= p+" lies after "+p1;
+            document.getElementById("instruct").value= p+" lies after "+p1;
          }
       }
 
       else if(error[index+1]==undefined && error[index-1]==undefined){
          if (error[index]<=4){
-            document.getElementById("instruct").innerHTML= p+" lies between sun and milkyway";
+            document.getElementById("instruct").value= p+" lies between sun and milkyway";
          }
          else{
-            document.getElementById("instruct").innerHTML= p+" lies after milkyway";
+            document.getElementById("instruct").value= p+" lies after milkyway";
          }
       }
 
       else{
-         document.getElementById("instruct").innerHTML= p+" lies between " + p1 +" and " + p2;
+         document.getElementById("instruct").value= p+" lies between " + p1 +" and " + p2;
       }
       
       //dexter_voice();

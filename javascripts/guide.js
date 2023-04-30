@@ -8,6 +8,7 @@ if ('speechSynthesis' in window) {
 
 function OKbutton(){
     document.getElementById("button").style.display = 'none'; 
+    document.getElementById("close-up-image").style.display = 'none'; 
     var Text;
     if(document.getElementById("button").value==='1'){
       Text = "Drag the dark grey planet that has wrinkles on it!";
@@ -31,9 +32,9 @@ function OKbutton(){
       Text = "Drag the planet which is blue in colour and has faint rings.";
     } 
     if(document.getElementById("button").value==='8'){
-      Text = "Drag the dark, cold and windy planet!<br>(It's colour is dark blue.)";
+      Text = "Drag the dark, cold and windy planet! It's colour is dark blue.";
     } 
-    document.getElementById("instruct").innerHTML = Text
+    document.getElementById("instruct").value = Text
     translateLang();
     // return Text
  }
